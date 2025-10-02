@@ -9,7 +9,7 @@ const Home = () => {
     const [contests, setContests] = useState([]);
 
     useEffect(() => {
-        fetch('process.env.PUBLIC_URL/db.json')
+        fetch(`${process.env.PUBLIC_URL}/db.json`)
             .then(r => r.json())
             .then(data => setContests(data.contest || []))
             .catch(console.error);
