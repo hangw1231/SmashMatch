@@ -4,7 +4,7 @@ const ApplyContest = () => {
     const [applyContest, setApplyContest] = useState(null);
 
     useEffect(() => {
-        fetch("/db.json")
+        fetch("process.env.PUBLIC_URL/db.json")
             .then((r) => r.json())
             .then((data) => {
                 const list = data?.contest || data?.contests || [];
